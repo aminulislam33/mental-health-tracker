@@ -7,6 +7,8 @@ const moodLogRoutes = require("./routes/moodLogRoutes");
 const journalRoutes = require("./routes/journalRoutes");
 const feedbackRoutes = require("./routes/feedbackRoutes");
 const resourcesRoutes = require("./routes/resourceRoutes");
+const forumPostRoutes = require("./routes/forumPostRoutes");
+const peerSupportGroupRoutes = require("./routes/peerSupportGroupRoutes");
 const symptomLogRoutes = require("./routes/symptomLogRoutes");
 
 dotenv.config();
@@ -23,6 +25,8 @@ app.use("/api/mood-logs", moodLogRoutes);
 app.use("/api/journals", journalRoutes);
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/resources", resourcesRoutes);
+app.use("/api/forums", forumPostRoutes);
+app.use("/api/groups", peerSupportGroupRoutes);
 app.use("/api/symptoms", symptomLogRoutes);
 
 
