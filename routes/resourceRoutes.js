@@ -1,7 +1,9 @@
-const express = require("express");
-const { getResources } = require("../controllers/resourceController");
+const express = require('express');
+const { NewRource, RetrieveResources, RetrieveResourcesByType } = require('../controllers/resourceController');
 const router = express.Router();
 
-router.get("/", getResources);
+router.post('/', NewRource);
+router.get('/', RetrieveResources);
+router.get('//:type', RetrieveResourcesByType);
 
 module.exports = router;
